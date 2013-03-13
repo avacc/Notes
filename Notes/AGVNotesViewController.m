@@ -21,9 +21,7 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    /*NSURLRequest* request = [NSURLRequest requestWithURL: [NSURL URLWithString: AGVFourSquareURL]];
-    NSURLConnection* connection = [[NSURLConnection alloc] initWithRequest: request delegate: self];
-    [connection start];*/
+    
     [self init];
     
 }
@@ -33,18 +31,12 @@
     Note* newNote = source.noteToBeSaved;
     NSIndexPath* indexPath = [NSIndexPath indexPathForRow: [self.notes count] inSection: 0];
     [self.notes addObject: newNote];
-    /*if(self.notes != nil){
-        NSLog(@"noteToBeSaved is not nil: name:%@", source.noteToBeSaved.title);
-    }
-    if([self.notes count] == 0){
-        NSLog(@"notes is empty");
-    }
-    NSLog(@"%d", [self.notes count]);*/
+    
     NSArray* array = [[NSArray alloc] initWithObjects: indexPath, nil];
     NSLog(@"%d", [self.tableView numberOfRowsInSection: 0]);
     [self.tableView insertRowsAtIndexPaths: array withRowAnimation: UITableViewRowAnimationAutomatic];
     NoteCell* cell = (NoteCell*) [self.tableView cellForRowAtIndexPath: indexPath];
-    //cell.associatedNote = source.noteToBeSaved;
+
     cell.textLabel.text = source.noteToBeSaved.title;
     [self.tableView reloadData];
 }
@@ -59,10 +51,7 @@
     if(!cell){
         cell = [[NoteCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: AGVCellIdentifier];
     }
-    /*
-    Note* note = [self.notes objectAtIndex: indexPath.row];
-    cell.associatedNote = note;
-    */ 
+    
         
     return cell;
 }
@@ -74,28 +63,7 @@
 - (NSInteger) tableView: (UITableView*) tableView numberOfRowsInSection: (NSInteger) section {
     return [self.notes count];
 }
-/*
-#pragma mark - NSURLConnectionDataDelegate Methods
 
-- (void) connection: (NSURLConnection*) connection didReceiveResponse: (NSURLResponse*) response {
-    _data = [[NSMutableData alloc] init];
-}
-
-- (void) connection: (NSURLConnection*) connection didReceiveData: (NSData*) data {
-    [_data appendData: data];
-}
-
-- (void) connection: (NSURLConnection*) connection didFailWithError: (NSError*) error {
-    
-}
-
-- (void) connectionDidFinishLoading: (NSURLConnection*) connection {
-    NSDictionary* foursquareResponse = [NSJSONSerialization JSONObjectWithData: _data options: 0 error: nil];
-    self.locations = foursquareResponse[@"response"][@"venues"];
-    [self.tableView reloadData];
-    NSLog(@"%@", foursquareResponse);
-}
-*/
 #pragma mark - Segue
 
 - (void) prepareForSegue: (UIStoryboardSegue*) segue sender: (id) sender {
