@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA40736516E4161C00437D59 /* AGVNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA40736416E4161C00437D59 /* AGVNotesViewController.m */; };
 		FA506E6A16E142DD004A09F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA506E6916E142DD004A09F3 /* UIKit.framework */; };
 		FA506E6C16E142DD004A09F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA506E6B16E142DD004A09F3 /* Foundation.framework */; };
 		FA506E6E16E142DD004A09F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA506E6D16E142DD004A09F3 /* CoreGraphics.framework */; };
@@ -17,12 +18,18 @@
 		FA506E7E16E142DD004A09F3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA506E7D16E142DD004A09F3 /* Default@2x.png */; };
 		FA506E8016E142DD004A09F3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA506E7F16E142DD004A09F3 /* Default-568h@2x.png */; };
 		FA506E8316E142DD004A09F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA506E8116E142DD004A09F3 /* MainStoryboard.storyboard */; };
-		FA506E8616E142DD004A09F3 /* AGVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA506E8516E142DD004A09F3 /* AGVViewController.m */; };
+		FA506E8616E142DD004A09F3 /* AGVNoteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA506E8516E142DD004A09F3 /* AGVNoteDetailViewController.m */; };
 		FA506E8E16E142DD004A09F3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA506E8D16E142DD004A09F3 /* SenTestingKit.framework */; };
 		FA506E8F16E142DD004A09F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA506E6916E142DD004A09F3 /* UIKit.framework */; };
 		FA506E9016E142DD004A09F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA506E6B16E142DD004A09F3 /* Foundation.framework */; };
 		FA506E9816E142DE004A09F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA506E9616E142DE004A09F3 /* InfoPlist.strings */; };
 		FA506E9B16E142DE004A09F3 /* NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA506E9A16E142DE004A09F3 /* NotesTests.m */; };
+		FA911CC516E81DD7002D4C54 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA911CC416E81DD7002D4C54 /* MapKit.framework */; };
+		FA911CC716E81E7D002D4C54 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA911CC616E81E7D002D4C54 /* CoreLocation.framework */; };
+		FA911CCA16E87C47002D4C54 /* NoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA911CC916E87C47002D4C54 /* NoteCell.m */; };
+		FA911CCD16E96A50002D4C54 /* AGVNewNoteContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA911CCC16E96A50002D4C54 /* AGVNewNoteContentViewController.m */; };
+		FA911CD016E96A71002D4C54 /* AGVNewNoteLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA911CCF16E96A71002D4C54 /* AGVNewNoteLocationViewController.m */; };
+		FA911CD316E96B26002D4C54 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = FA911CD216E96B26002D4C54 /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA40736316E4161C00437D59 /* AGVNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGVNotesViewController.h; sourceTree = "<group>"; };
+		FA40736416E4161C00437D59 /* AGVNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVNotesViewController.m; sourceTree = "<group>"; };
 		FA506E6616E142DD004A09F3 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA506E6916E142DD004A09F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA506E6B16E142DD004A09F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,14 +59,24 @@
 		FA506E7D16E142DD004A09F3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FA506E7F16E142DD004A09F3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FA506E8216E142DD004A09F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FA506E8416E142DD004A09F3 /* AGVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGVViewController.h; sourceTree = "<group>"; };
-		FA506E8516E142DD004A09F3 /* AGVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGVViewController.m; sourceTree = "<group>"; };
+		FA506E8416E142DD004A09F3 /* AGVNoteDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGVNoteDetailViewController.h; sourceTree = "<group>"; };
+		FA506E8516E142DD004A09F3 /* AGVNoteDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGVNoteDetailViewController.m; sourceTree = "<group>"; };
 		FA506E8C16E142DD004A09F3 /* NotesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA506E8D16E142DD004A09F3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FA506E9516E142DE004A09F3 /* NotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotesTests-Info.plist"; sourceTree = "<group>"; };
 		FA506E9716E142DE004A09F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA506E9916E142DE004A09F3 /* NotesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesTests.h; sourceTree = "<group>"; };
 		FA506E9A16E142DE004A09F3 /* NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesTests.m; sourceTree = "<group>"; };
+		FA911CC416E81DD7002D4C54 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FA911CC616E81E7D002D4C54 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FA911CC816E87C47002D4C54 /* NoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteCell.h; sourceTree = "<group>"; };
+		FA911CC916E87C47002D4C54 /* NoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteCell.m; sourceTree = "<group>"; };
+		FA911CCB16E96A50002D4C54 /* AGVNewNoteContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGVNewNoteContentViewController.h; sourceTree = "<group>"; };
+		FA911CCC16E96A50002D4C54 /* AGVNewNoteContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVNewNoteContentViewController.m; sourceTree = "<group>"; };
+		FA911CCE16E96A71002D4C54 /* AGVNewNoteLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGVNewNoteLocationViewController.h; sourceTree = "<group>"; };
+		FA911CCF16E96A71002D4C54 /* AGVNewNoteLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVNewNoteLocationViewController.m; sourceTree = "<group>"; };
+		FA911CD116E96B26002D4C54 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		FA911CD216E96B26002D4C54 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA911CC716E81E7D002D4C54 /* CoreLocation.framework in Frameworks */,
+				FA911CC516E81DD7002D4C54 /* MapKit.framework in Frameworks */,
 				FA506E6A16E142DD004A09F3 /* UIKit.framework in Frameworks */,
 				FA506E6C16E142DD004A09F3 /* Foundation.framework in Frameworks */,
 				FA506E6E16E142DD004A09F3 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +127,8 @@
 		FA506E6816E142DD004A09F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA911CC616E81E7D002D4C54 /* CoreLocation.framework */,
+				FA911CC416E81DD7002D4C54 /* MapKit.framework */,
 				FA506E6916E142DD004A09F3 /* UIKit.framework */,
 				FA506E6B16E142DD004A09F3 /* Foundation.framework */,
 				FA506E6D16E142DD004A09F3 /* CoreGraphics.framework */,
@@ -117,11 +140,21 @@
 		FA506E6F16E142DD004A09F3 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				FA911CD116E96B26002D4C54 /* Note.h */,
+				FA911CD216E96B26002D4C54 /* Note.m */,
+				FA911CCE16E96A71002D4C54 /* AGVNewNoteLocationViewController.h */,
+				FA911CCF16E96A71002D4C54 /* AGVNewNoteLocationViewController.m */,
+				FA911CCB16E96A50002D4C54 /* AGVNewNoteContentViewController.h */,
+				FA911CCC16E96A50002D4C54 /* AGVNewNoteContentViewController.m */,
+				FA911CC816E87C47002D4C54 /* NoteCell.h */,
+				FA911CC916E87C47002D4C54 /* NoteCell.m */,
+				FA40736316E4161C00437D59 /* AGVNotesViewController.h */,
+				FA40736416E4161C00437D59 /* AGVNotesViewController.m */,
 				FA506E7816E142DD004A09F3 /* AGVAppDelegate.h */,
 				FA506E7916E142DD004A09F3 /* AGVAppDelegate.m */,
 				FA506E8116E142DD004A09F3 /* MainStoryboard.storyboard */,
-				FA506E8416E142DD004A09F3 /* AGVViewController.h */,
-				FA506E8516E142DD004A09F3 /* AGVViewController.m */,
+				FA506E8416E142DD004A09F3 /* AGVNoteDetailViewController.h */,
+				FA506E8516E142DD004A09F3 /* AGVNoteDetailViewController.m */,
 				FA506E7016E142DD004A09F3 /* Supporting Files */,
 			);
 			path = Notes;
@@ -273,7 +306,12 @@
 			files = (
 				FA506E7616E142DD004A09F3 /* main.m in Sources */,
 				FA506E7A16E142DD004A09F3 /* AGVAppDelegate.m in Sources */,
-				FA506E8616E142DD004A09F3 /* AGVViewController.m in Sources */,
+				FA506E8616E142DD004A09F3 /* AGVNoteDetailViewController.m in Sources */,
+				FA40736516E4161C00437D59 /* AGVNotesViewController.m in Sources */,
+				FA911CCA16E87C47002D4C54 /* NoteCell.m in Sources */,
+				FA911CCD16E96A50002D4C54 /* AGVNewNoteContentViewController.m in Sources */,
+				FA911CD016E96A71002D4C54 /* AGVNewNoteLocationViewController.m in Sources */,
+				FA911CD316E96B26002D4C54 /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +492,7 @@
 				FA506EA016E142DE004A09F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA506EA116E142DE004A09F3 /* Build configuration list for PBXNativeTarget "NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +501,7 @@
 				FA506EA316E142DE004A09F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
