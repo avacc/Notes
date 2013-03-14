@@ -210,7 +210,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Type note here" translatesAutoresizingMaskIntoConstraints="NO" id="yQ5-yk-heO">
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="221" id="ygY-VH-2vt"/>
+                                    <constraint firstAttribute="height" constant="157" id="CuS-qa-QUx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -234,9 +234,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="I0E-DI-My4" secondAttribute="bottom" constant="7" id="OFx-Rd-gDy"/>
                             <constraint firstItem="yQ5-yk-heO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Oaf-xi-dD2"/>
                             <constraint firstItem="yQ5-yk-heO" firstAttribute="centerX" secondItem="6tY-AG-iWB" secondAttribute="centerX" type="default" id="Te6-nO-Au8"/>
-                            <constraint firstAttribute="bottom" secondItem="I0E-DI-My4" secondAttribute="bottom" constant="6" id="UCj-yL-U5y"/>
                             <constraint firstItem="6tY-AG-iWB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" id="YaC-0E-RgA"/>
                             <constraint firstAttribute="trailing" secondItem="yQ5-yk-heO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cjY-BU-lkM"/>
                             <constraint firstItem="yQ5-yk-heO" firstAttribute="top" secondItem="3" secondAttribute="top" constant="56" id="qGs-Su-i36"/>
@@ -249,6 +249,7 @@
                     <connections>
                         <outlet property="content" destination="yQ5-yk-heO" id="hg1-qx-dk9"/>
                         <outlet property="map" destination="I0E-DI-My4" id="004-2l-5Sh"/>
+                        <outlet property="noteTitle" destination="6tY-AG-iWB" id="htS-VI-TRS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -276,6 +277,7 @@
             <relationships>
                 <relationship kind="outlet" name="content" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="noteTitle" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="AGVNotesViewController" superclassName="UITableViewController">

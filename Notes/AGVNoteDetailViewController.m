@@ -23,6 +23,7 @@
     MKPointAnnotation* pin = (MKPointAnnotation*) array.lastObject;
     region.center = pin.coordinate;
     [self.map setRegion: region animated: YES];
+    
 }
 
 - (void) addPinToMapAtLocation: (CLLocationCoordinate2D) location withName: (NSString*) locationName {

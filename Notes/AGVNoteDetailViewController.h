@@ -12,7 +12,7 @@
 
 @interface AGVNoteDetailViewController : UIViewController
 
-@property (strong, nonatomic) UILabel* noteTitle;
+@property (strong, nonatomic) IBOutlet UILabel* noteTitle;
 @property (strong, nonatomic) IBOutlet UITextView* content;
 @property (strong, nonatomic) IBOutlet MKMapView* map;
 
