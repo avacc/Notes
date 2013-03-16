@@ -217,7 +217,6 @@
                             </textView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="I0E-DI-My4">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="298" id="lrq-1O-mPf"/>
                                     <constraint firstAttribute="height" constant="206" id="tY0-d9-WFj"/>
                                 </constraints>
                             </mapView>
@@ -225,7 +224,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="GkC-Yd-tyS"/>
-                                    <constraint firstAttribute="width" constant="76" id="fO5-Or-8IP"/>
+                                    <constraint firstAttribute="width" constant="298" id="bWt-jg-Kko"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -236,11 +235,12 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="I0E-DI-My4" secondAttribute="bottom" constant="7" id="OFx-Rd-gDy"/>
                             <constraint firstItem="yQ5-yk-heO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Oaf-xi-dD2"/>
-                            <constraint firstItem="yQ5-yk-heO" firstAttribute="centerX" secondItem="6tY-AG-iWB" secondAttribute="centerX" type="default" id="Te6-nO-Au8"/>
+                            <constraint firstItem="6tY-AG-iWB" firstAttribute="centerX" secondItem="yQ5-yk-heO" secondAttribute="centerX" type="default" id="TT6-uQ-Hri"/>
                             <constraint firstItem="6tY-AG-iWB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="10" id="YaC-0E-RgA"/>
+                            <constraint firstItem="I0E-DI-My4" firstAttribute="leading" secondItem="6tY-AG-iWB" secondAttribute="leading" type="default" id="bRA-SO-DZA"/>
                             <constraint firstAttribute="trailing" secondItem="yQ5-yk-heO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cjY-BU-lkM"/>
+                            <constraint firstItem="I0E-DI-My4" firstAttribute="trailing" secondItem="6tY-AG-iWB" secondAttribute="trailing" type="default" id="k9O-SC-etG"/>
                             <constraint firstItem="yQ5-yk-heO" firstAttribute="top" secondItem="3" secondAttribute="top" constant="56" id="qGs-Su-i36"/>
-                            <constraint firstItem="yQ5-yk-heO" firstAttribute="centerX" secondItem="I0E-DI-My4" secondAttribute="centerX" type="default" id="zJQ-nb-OIR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Note Details" id="t70-Rc-R3p">
