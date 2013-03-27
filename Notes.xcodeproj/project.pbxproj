@@ -30,6 +30,9 @@
 		FA911CCD16E96A50002D4C54 /* AGVNewNoteContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA911CCC16E96A50002D4C54 /* AGVNewNoteContentViewController.m */; };
 		FA911CD016E96A71002D4C54 /* AGVNewNoteLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA911CCF16E96A71002D4C54 /* AGVNewNoteLocationViewController.m */; };
 		FA911CD316E96B26002D4C54 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = FA911CD216E96B26002D4C54 /* Note.m */; };
+		FAA8BA381701025000DE71BC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA8BA371701025000DE71BC /* CoreData.framework */; };
+		FAA8BA3B170102E500DE71BC /* NotesCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA8BA39170102E500DE71BC /* NotesCD.xcdatamodeld */; };
+		FAA8BA3E17010D7800DE71BC /* NoteLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8BA3D17010D7800DE71BC /* NoteLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,10 @@
 		FA911CCF16E96A71002D4C54 /* AGVNewNoteLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVNewNoteLocationViewController.m; sourceTree = "<group>"; };
 		FA911CD116E96B26002D4C54 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		FA911CD216E96B26002D4C54 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		FAA8BA371701025000DE71BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FAA8BA3A170102E500DE71BC /* NotesCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesCD.xcdatamodel; sourceTree = "<group>"; };
+		FAA8BA3C17010D7800DE71BC /* NoteLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteLocation.h; sourceTree = "<group>"; };
+		FAA8BA3D17010D7800DE71BC /* NoteLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA8BA381701025000DE71BC /* CoreData.framework in Frameworks */,
 				FA911CC716E81E7D002D4C54 /* CoreLocation.framework in Frameworks */,
 				FA911CC516E81DD7002D4C54 /* MapKit.framework in Frameworks */,
 				FA506E6A16E142DD004A09F3 /* UIKit.framework in Frameworks */,
@@ -127,6 +135,7 @@
 		FA506E6816E142DD004A09F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA8BA371701025000DE71BC /* CoreData.framework */,
 				FA911CC616E81E7D002D4C54 /* CoreLocation.framework */,
 				FA911CC416E81DD7002D4C54 /* MapKit.framework */,
 				FA506E6916E142DD004A09F3 /* UIKit.framework */,
@@ -140,8 +149,11 @@
 		FA506E6F16E142DD004A09F3 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				FAA8BA39170102E500DE71BC /* NotesCD.xcdatamodeld */,
 				FA911CD116E96B26002D4C54 /* Note.h */,
 				FA911CD216E96B26002D4C54 /* Note.m */,
+				FAA8BA3C17010D7800DE71BC /* NoteLocation.h */,
+				FAA8BA3D17010D7800DE71BC /* NoteLocation.m */,
 				FA911CCE16E96A71002D4C54 /* AGVNewNoteLocationViewController.h */,
 				FA911CCF16E96A71002D4C54 /* AGVNewNoteLocationViewController.m */,
 				FA911CCB16E96A50002D4C54 /* AGVNewNoteContentViewController.h */,
@@ -312,6 +324,8 @@
 				FA911CCD16E96A50002D4C54 /* AGVNewNoteContentViewController.m in Sources */,
 				FA911CD016E96A71002D4C54 /* AGVNewNoteLocationViewController.m in Sources */,
 				FA911CD316E96B26002D4C54 /* Note.m in Sources */,
+				FAA8BA3B170102E500DE71BC /* NotesCD.xcdatamodeld in Sources */,
+				FAA8BA3E17010D7800DE71BC /* NoteLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +518,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAA8BA39170102E500DE71BC /* NotesCD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAA8BA3A170102E500DE71BC /* NotesCD.xcdatamodel */,
+			);
+			currentVersion = FAA8BA3A170102E500DE71BC /* NotesCD.xcdatamodel */;
+			path = NotesCD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA506E5E16E142DD004A09F3 /* Project object */;
 }

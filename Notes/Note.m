@@ -10,19 +10,62 @@
 
 @implementation Note
 
-- (void) setLocation: (CLLocationCoordinate2D) newLocation {
-    location = newLocation;
+@dynamic title;
+@dynamic content;
+@dynamic timestamp;
+@dynamic noteLocation;
+
+/*
+- (NSString*) title {
+    if(){
+        return self.title;
+    }
+    self.title = [[NSString alloc] init];
+    return self.title;
 }
 
-- (void) setLocationName: (NSString*) newLocationName {
-    locationName = newLocationName;
+- (void) setTitle: (NSString*) title {
+    if([self title] != nil){
+        self.title = title;
+    }
 }
 
-- (CLLocationCoordinate2D) getLocation {
-    return location;
+- (NSString*) content {
+    if(self.content != nil){
+        return self.content;
+    }
+    self.content = [[NSString alloc] init];
+    return self.content;
 }
 
-- (NSString*) getLocationName {
-    return locationName;
+- (void) setContent: (NSString*) content {
+    if([self content] != nil){
+        self.content = content;
+    }
 }
+
+- (NSDate*) timestamp {
+    if(self.timestamp != nil){
+        return self.timestamp;
+    }
+    self.timestamp = [NSDate date];
+    return self.timestamp;
+}
+
+- (void) setTimestamp: (NSDate*) timestamp {
+    if([self timestamp] != nil){
+        self.timestamp = timestamp;
+    }
+}
+
+- (NoteLocation*) noteLocation {
+    if(self.noteLocation != nil){
+        return self.noteLocation;
+    }
+    return nil;
+}
+
+- (void) setNoteLocation: (NoteLocation*) noteLocation {
+    self.noteLocation = noteLocation;
+}*/
 @end

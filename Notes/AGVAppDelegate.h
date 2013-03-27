@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AGVNotesViewController.h"
 
 @interface AGVAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSManagedObjectContext* managedObjectContext;
+@property (strong, nonatomic) NSPersistentStoreCoordinator* persistentStoreCoordinator;
+@property (strong, nonatomic) NSManagedObjectModel* managedObjectModel;
 
 @end

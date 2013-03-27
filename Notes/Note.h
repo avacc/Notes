@@ -7,20 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CoreData/CoreData.h>
 
-@interface Note : NSObject {
-    CLLocationCoordinate2D location;
-    NSString* locationName;
-}
+@class NoteLocation;
+
+@interface Note : NSManagedObject 
 
 @property (strong, nonatomic) NSString* title;
 @property (strong, nonatomic) NSString* content;
-
-- (void) setLocation: (CLLocationCoordinate2D) newLocation;
-- (void) setLocationName: (NSString*) newLocationName;
-- (CLLocationCoordinate2D) getLocation;
-- (NSString*) getLocationName;
+@property (strong, nonatomic) NSDate* timestamp;
+@property (strong, nonatomic) NoteLocation* noteLocation;
 
 @end

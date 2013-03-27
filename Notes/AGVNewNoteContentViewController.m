@@ -11,11 +11,13 @@
 @implementation AGVNewNoteContentViewController
 
 - (void) prepareForSegue: (UIStoryboardSegue*) segue sender: (id) sender {
+    NSLog(@"segue from content controller");
     if([segue.identifier isEqualToString:@"newNoteLocationSegue"]){
         AGVNewNoteLocationViewController* destination = segue.destinationViewController;
         if([destination view]){
-            destination.noteToBeSaved.title = self.noteTitle.text;
-            destination.noteToBeSaved.content = self.noteContent.text;
+            NSLog(@"In conditional");
+            destination.noteTitle = self.noteTitle.text;
+            destination.noteContent = self.noteContent.text;
         }
     }
 }

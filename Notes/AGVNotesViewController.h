@@ -8,24 +8,30 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 #import "AGVNoteDetailViewController.h"
 #import "AGVNewNoteContentViewController.h"
 #import "AGVNewNoteLocationViewController.h"
+#import "NoteLocation.h"
 #import "NoteCell.h"
 
 #define AGVCellIdentifier @"My Cell Identifier"
+#define AGVEntityName @"Note"
+#define AGVEntityLocationName @"NoteLocation"
+#define AGVSaveError @"Error saving note: %@"
 
 
-@interface AGVNotesViewController : UITableViewController <NSURLConnectionDataDelegate>
+@interface AGVNotesViewController : UITableViewController <NSURLConnectionDataDelegate, NSFetchedResultsControllerDelegate, AGVNewNoteLocationViewControllerDelegate>
 
 @property (strong, nonatomic) NSMutableArray* notes;
-
+@property (strong, nonatomic) NSManagedObjectContext* managedObjectContext;
+@property (retain, nonatomic) NSFetchedResultsController* fetchedResultsController;
 
 - (IBAction) saveNote: (UIStoryboardSegue*) segue;
 - (IBAction) cancelNote: (UIStoryboardSegue*) segue;
+- (IBAction) edit;
 
-- (UITableViewCell*) tableView: (UITableView*) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath;
-
+//- (BOOL) addNoteWithTitle: (NSString*) title content: (NSString*) content;
 
 
 

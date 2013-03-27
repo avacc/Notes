@@ -15,7 +15,6 @@
 -(id) init {
     self = [super init];
     if(self){
-        self.noteToBeSaved = [[Note alloc] init];
     }
     return self;
 }
@@ -25,7 +24,6 @@
     longPressRecognizer.minimumPressDuration = 1.5;
     longPressRecognizer.numberOfTouchesRequired = 1;
     [self.map addGestureRecognizer: longPressRecognizer];
-    self.noteToBeSaved = [[Note alloc] init];
 }
 
 - (void) addPinToMapAtLocation: (CLLocationCoordinate2D) location{
@@ -40,8 +38,10 @@
     prompt.delegate = self;
     [self.map addAnnotation: pin];
     [self.map setCenterCoordinate: pin.coordinate animated: YES];
-    [self.noteToBeSaved setLocationName: pin.title];
-    [self.noteToBeSaved setLocation: pin.coordinate];
+    NSString* lat = [NSString stringWithFormat: @"%f", pin.coordinate.latitude];
+    NSString* lon = [NSString stringWithFormat: @"%f", pin.coordinate.longitude];
+    self.latitude = lat;
+    self.longitude = lon;
 }
 
 
@@ -62,7 +62,9 @@
         for(UIView* view in alertView.subviews){
             if([view isKindOfClass: [UITextField class]]){
                 UITextField* locationName = (UITextField*) view;
-                [self.noteToBeSaved setLocationName: locationName.text];
+                self.locationName = locationName.text;
+                //NoteLocation* newNoteLocation = [self noteLocationToBeSaved];
+                //newNoteLocation.locationName = locationName.text;
                 [alertView dismissWithClickedButtonIndex: 0 animated: YES];
                 break;
             }

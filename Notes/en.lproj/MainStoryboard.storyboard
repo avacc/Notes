@@ -34,6 +34,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="Rqn-BC-1jG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="4Hb-ag-3EY">
+                            <connections>
+                                <action selector="edit" destination="tka-xn-zD9" id="eaJ-mi-Mtb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="opC-7L-Oxd">
                             <connections>
                                 <segue destination="3LU-Ya-EEf" kind="modal" identifier="newNoteSegue" id="sUP-rh-OIH"/>
@@ -269,6 +274,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AGVNewNoteLocationViewController.h"/>
             <relationships>
                 <relationship kind="action" name="respondToLongPress:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="outlet" name="delegate" candidateClass="AGVNotesViewController"/>
                 <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
             </relationships>
         </class>
@@ -284,6 +290,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AGVNotesViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancelNote:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="edit"/>
                 <relationship kind="action" name="saveNote:" candidateClass="UIStoryboardSegue"/>
             </relationships>
         </class>
