@@ -18,6 +18,7 @@
     }
     return self;
 }
+
 - (void) viewDidLoad {
     [super viewDidLoad];
     UILongPressGestureRecognizer* longPressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget: self.map action:@selector(respondToLongPress:)];

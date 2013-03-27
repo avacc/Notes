@@ -151,7 +151,7 @@
                             <constraint firstItem="UWq-D0-2P2" firstAttribute="trailing" secondItem="dbK-Pf-As4" secondAttribute="trailing" type="default" id="Up3-Lt-tXl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Location" prompt="Hold down location to select" id="wXe-fk-Ryh">
+                    <navigationItem key="navigationItem" title="Location" prompt="Hold down location and release to select" id="wXe-fk-Ryh">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ZWl-lW-0pS"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="g0a-ye-Nbx">
                             <connections>

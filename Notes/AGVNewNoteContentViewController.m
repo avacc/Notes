@@ -10,6 +10,7 @@
 
 @implementation AGVNewNoteContentViewController
 
+#pragma mark - Segue
 - (void) prepareForSegue: (UIStoryboardSegue*) segue sender: (id) sender {
     NSLog(@"segue from content controller");
     if([segue.identifier isEqualToString:@"newNoteLocationSegue"]){

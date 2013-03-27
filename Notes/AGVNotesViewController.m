@@ -61,7 +61,6 @@
     }else{
         [self.tableView setEditing: YES animated: YES];
     }
-    
 }
 
 #pragma mark - UITableViewDataSource methods

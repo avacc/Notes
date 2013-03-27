@@ -16,7 +16,4 @@
 @property (strong, nonatomic) IBOutlet UITextField* noteTitle;
 @property (strong, nonatomic) IBOutlet UITextView* noteContent;
 
-# pragma mark - Segue
-- (void) prepareForSegue: (UIStoryboardSegue*) segue sender: (id) sender;
-
 @end
